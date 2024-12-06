@@ -22,7 +22,7 @@ Welcome to my portfolio website! This is a showcase of my work, skills, and proj
 This portfolio reflects my passion for creating scalable, user-centric web applications and leveraging AI/ML to solve real-world problems. It's designed to give recruiters and collaborators a quick overview of my capabilities and past work.  
 
 ## How to View  
-- **Live Website:** [Your Portfolio Link]  
+- **Live Website:** [Your Portfolio Link](https://prince41773.github.io/Portfolio/)  
 - **Source Code:** The complete code for this portfolio is available in this repository.  
 
 ## Contact  
