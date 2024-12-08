@@ -487,6 +487,77 @@ data analysis, feature engineering, and model evaluation using advanced algorith
         </div>
       </div>
     </section>
+
+    <section class="certifications-section-container" id="certifications" data-aos="fade-up">
+      <div class="section-heading">
+        <h2 class="section-heading-article" tabindex="0" aria-label="Certifications heading">
+          &#60;/Certifications&#62;
+        </h2>
+        <p class="sectionHeadingP"></p>
+      </div>
+      <div class="scrollable-container" id="certifications-scroll">
+        <div class="certifications-box">
+          <img src="src/png/gccc.jpg" alt="Google Certification" class="certification-image" />
+          <p class="certification-name">Google Advanced Data Analysis Specialization</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/npteldbms.png" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">NPTEL Database Management System Certificate</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/mlcomp.png" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">Machine Learning Specialization By Stanford University | DeepLearning.AI</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/ibms.jpg" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">Data Analysis With Python Offered By IBM</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/lc180 (1).png" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">LeetCode achievements of 7 months badges and 200+ days streak</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/googleadataa.png" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">Google Data Analytics Specialization</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/frfy.jpg" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">Certificate for acheiving First Rank In First Year Of Acadimics</p>
+        </div>
+        <div class="certifications-box">
+          <img src="src/png/frfs.jpg" alt="IBM Certification" class="certification-image" />
+          <p class="certification-name">Certificate for acheiving First Rank In First Semester Of Acadimicsp>
+        </div>
+      </div>
+    </section>
+    
+    <section class="experience-section-container" id="experience" data-aos="fade-up">
+      <div class="section-heading">
+        <h2 class="section-heading-article" tabindex="0" aria-label="Experience heading">
+          &#60;/Experience&#62;
+        </h2>
+        <p class="sectionHeadingP"></p>
+      </div>
+      <div class="scrollable-container" id="experience-scroll">
+        <div class="experience-box">
+          <img src="src/png/ccc.png" alt="CodeClause Internship Certificate" class="experience-image" />
+          <p class="experience-name">AI Intern</p>
+        </div>
+        <div class="experience-box">
+          <img src="src/png/eis.png" alt="EISystem Internship Certificate" class="experience-image" />
+          <p class="experience-name">AI/ML Intern</p>
+        </div>
+        <div class="experience-box">
+          <img src="src/png/icpip.jpg" alt="InternPe Internship Certificate" class="experience-image" />
+          <p class="experience-name">Web Developer Intern</p>
+        </div>
+        <div class="experience-box">
+          <img src="src/png/inpm.png" alt="InternPe Internship Certificate" class="experience-image" />
+          <p class="experience-name">ML Intern</p>
+        </div>
+      </div>
+    </section>
+    
   </main>
   <!-- main ends here -->
 
@@ -557,7 +628,56 @@ data analysis, feature engineering, and model evaluation using advanced algorith
   <!-- footer ends here -->
 
   <script src="main.js"></script>
-
+  <script>
+    function autoScroll(containerId) {
+      const container = document.getElementById(containerId);
+      let scrollAmount = 0;
+      let isUserInteracting = false; // Tracks if the user is interacting with the container
+      let scrollTimeout;
+  
+      const startAutoScroll = () => {
+        scrollTimeout = setInterval(() => {
+          if (!isUserInteracting) { // Only auto-scroll if the user is not interacting
+            scrollAmount += 320; // Adjust to match card width
+            if (scrollAmount >= container.scrollWidth) {
+              scrollAmount = 0;
+            }
+            container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+          }
+        }, 3000); // Scroll every 3 seconds
+      };
+  
+      const stopAutoScroll = () => {
+        clearInterval(scrollTimeout);
+      };
+  
+      // Listen for user interactions
+      container.addEventListener('mousedown', () => {
+        isUserInteracting = true;
+        stopAutoScroll();
+      });
+  
+      container.addEventListener('mouseup', () => {
+        isUserInteracting = false;
+        startAutoScroll();
+      });
+  
+      container.addEventListener('mouseleave', () => {
+        isUserInteracting = false;
+        startAutoScroll();
+      });
+  
+      // Initialize auto-scrolling
+      startAutoScroll();
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      autoScroll("certifications-scroll");
+      autoScroll("experience-scroll");
+    });
+  </script>
+  
+  
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
